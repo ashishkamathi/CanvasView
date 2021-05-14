@@ -134,11 +134,10 @@ public class CanvasView extends View {
      */
     private void setup(Context context) {
         this.context = context;
-
+        this.setLayerType(LAYER_TYPE_HARDWARE, null);
         this.pathLists.add(new Path());
         this.paintLists.add(this.createPaint());
         this.historyPointer++;
-
         this.textPaint.setARGB(0, 255, 255, 255);
     }
 
